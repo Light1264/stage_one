@@ -5,3 +5,6 @@ opened in the app using webview flutter.
 
 # setup instructions
 git clone https://github.com/Light1264/stage_one.git
+
+# source code
+full source code is contained in the master branch
