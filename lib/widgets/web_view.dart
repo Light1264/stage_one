@@ -1,5 +1,6 @@
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class ExploreWebview extends StatefulWidget {
   const ExploreWebview({required this.url, required this.title});
@@ -12,6 +13,14 @@ class ExploreWebview extends StatefulWidget {
 class _ExploreWebviewState extends State<ExploreWebview> {
   final _key = UniqueKey();
   bool isDoneLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // Enable virtual display.
+    if (Platform.isAndroid) WebView.platform = AndroidWebView();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
