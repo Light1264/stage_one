@@ -18,9 +18,10 @@ class AppButton extends StatelessWidget {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => ExploreWebview(
-                  title: 'Terms of Service',
-                  url: "https://github.com/Light1264"),
+              builder: (context) => const ExploreWebview(
+                title: 'Terms of Service',
+                url: "https://github.com/Light1264",
+              ),
             ),
           );
         },
